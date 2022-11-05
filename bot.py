@@ -72,3 +72,4 @@ async def editing(bot, message):
               
                    
       
+autocaption.run()
