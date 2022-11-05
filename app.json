@@ -1,0 +1,52 @@
+{
+  "name": "Caption Bot",
+  "description": "Telegram auto caption bot. Create your Fork now.",
+  "keywords": [
+    "telegram",
+    "best",
+    "auto",
+    "caption" 
+  ],
+  "success_url": "https://telegram.com/DFF_TextReplaceBot",
+  "website": "https://github.com/0AIB/TG-Caption-Bot",
+  "repository": "https://github.com/0AIB/TG-Caption-Bot",  
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "CAPTION_TEXT": {
+      "description": "Add your caption Defult will be [Markdown] [nothing]",
+      "value": "", 
+      "required": false 
+    },
+    "CAPTION_POSITION": {
+      "description": "Position of your caption [TOP, BOTTOM, NIL]",
+      "value": ""    
+    }        
+    
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
