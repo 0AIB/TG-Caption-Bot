@@ -67,5 +67,6 @@ async def editing(bot, message):
           pass
               
                    
-      
+print("Bot Started! ✨")    
+
 autocaption.run()
