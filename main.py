@@ -5,7 +5,6 @@ logger = logging.getLogger(__name__)
 
 from pyrogram import filters, Client
 from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
-
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 usercaption_position = CAPTION_POSITION
@@ -18,7 +17,7 @@ autocaption = Client(
                         
 @autocaption.on_message(filters.command("start") & filters.incoming)
 async def start(bot, message):
-        await message.reply("<I>I Am Auto Caption Bot Just Add me as a Admin in your channel with edit permission and See Magic</I>\n• **support** : @Hollywodd_0980\n• **Source** : https://github.com/0AIB/TG-Caption-Bot")
+        await message.reply("<I>I Am Auto Caption Bot Just Add me as a Admin in your channel with edit permission and See Magic</I>\n\n• **support** : @Hollywodd_0980\n• **Source** : https://github.com/0AIB/TG-Caption-Bot")
 
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
