@@ -12,7 +12,7 @@ CAPTION_TEXT = os.environ.get("CAPTION_TEXT", "")
 CAPTION_POSITION = os.environ.get("CAPTION_POSITION", "bottom")
       
 autocaption = Client(
-   "Captioner", api_id=int(os.environ.get("APP_ID", "")), api_hash=os.environ.get("API_HASH"), ""), bot_token=os.environ.get("TG_BOT_TOKEN", ""),)
+   "Captioner", api_id=int(os.environ.get("APP_ID", "")), api_hash=os.environ.get("API_HASH"), ""), bot_token=os.environ.get("TG_BOT_TOKEN", ""))
 
 Hello = """
 Bot = Client(
