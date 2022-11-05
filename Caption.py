@@ -7,8 +7,6 @@ import asyncio
 from pyrogram import filters
 from bot import autocaption
 from config import Config
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-# =
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
