@@ -7,13 +7,19 @@ import asyncio
 from pyrogram import filters
 from bot import autocaption
 from config import Config
-
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 # =
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
 
+@autocaption.on_message(filters.command("current_caption") & filters.incoming)
+async def start(bot, message):
+        await message.reply("Here is your current caption.\n {Config.CAPTION_TEXT}")
+
+@autocaption.on_message(filters.command("start") & filters.incoming)
+async def start(bot, message):
+        await message.reply("<I>I Am Auto Caption Bot Just Add me as a Admin in your channel with edit permission and See Magic</I>\n• **support** : @Hollywodd_0980\n• **Source** : https://github.com/0AIB/TG-Caption-Bot")
 
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
