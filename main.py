@@ -6,10 +6,8 @@ logger = logging.getLogger(__name__)
 from pyrogram import filters, Client
 from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
 usercaption_position = CAPTION_POSITION
 caption_position = usercaption_position.lower()
-caption_text = CAPTION_TEXT
 
 autocaption = Client(
    "Captioner", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
