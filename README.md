@@ -1,4 +1,7 @@
-<h1 align='center'>🖊️ TG Auto Caption Bot </h1>
+<h2 align='center'>🖊️ TG Auto Caption Bot </h1>
+
+|Lite Version Of [AutoCaption-Ts_Bot-Clone](https://github.com/Ts-Bots/AutoCaption-Ts_Bot-Clone)
+|---
 
 
 <h4 align='center'>Bot Used For Auto Caption For Telegram Files & Video With Custom Text<br><br><i>(Only in channels either public or private Telegram channel)</i> </h4><br>
