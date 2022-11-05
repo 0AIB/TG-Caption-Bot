@@ -23,6 +23,7 @@ class autocaption(Client):
             caption = dict(
                 "caption"
             )
+        )
 
 if __name__ == "__main__" :
     autocaption().run()
