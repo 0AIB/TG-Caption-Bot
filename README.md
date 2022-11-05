@@ -1,11 +1,11 @@
-<h1 align='center'>🖊️ TG AutoCaption Bot </h1>
+<h1 align='center'>🖊️ TG Auto Caption Bot </h1>
 
 
 <h4 align='center'>Bot Used For Auto Caption For Telegram Files & Video With Custom Text<br><br><i>(Only in channels either public or private Telegram channel)</i> </h4><br>
 
 
 <h4 align='center'>✯ Demo Bot ✯<br></h4>
-<h3 align='center' ><b><a href="https://telegram.me/CapXBot">¢αρтισи вσт</a></b></h3>
+<h3 align='center' ><b><a href="https://telegram.me/DFF_TextReplaceBot">¢αρтισи вσт</a></b></h3>
 
 
 ###  Config Vars :
@@ -29,10 +29,7 @@
 
 ```
 /start - A command to start the bot
-/help  - A command to help you how to use the bot
-/about - A command to know about the bot
-/source - A Command to Looks about Source Code
 ```
 
-
-- [© Avishkar Patil](https://github.com/avipatilpro)
+#### [LX 0980](https://github.com/0AIB)
+#### [© Avishkar Patil](https://github.com/avipatilpro)
