@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 import os
 import asyncio
-from pyrogram import filters
+from pyrogram import filters, Client
 # from bot import autocaption
 from config import Config
 usercaption_position = Config.CAPTION_POSITION
@@ -16,7 +16,7 @@ autocaption = Client(
     "Captioner",
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
-    api_hash = Config.API_HASH,
+    api_hash = ConfigClient.API_HASH,
     workers = 20,
 )
             
