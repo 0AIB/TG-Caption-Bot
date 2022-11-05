@@ -1,27 +1,20 @@
-import logging
+import logging, asyncio, pyrogram, os
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-import pyrogram
-import os
-import asyncio
 from pyrogram import filters, Client
-# from bot import autocaption
 from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
+
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 usercaption_position = CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = CAPTION_TEXT
 
-
 autocaption = Client(
-    "Captioner",
-    bot_token=BOT_TOKEN,
-    api_id=API_ID,
-    api_hash=API_HASH,    
-)
+   "Captioner", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
                         
 @autocaption.on_message(filters.command("start") & filters.incoming)
 async def start(bot, message):
