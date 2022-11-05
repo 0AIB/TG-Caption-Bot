@@ -1,1 +1,1 @@
-worker: python3 caption.py
+worker: python3 main.py
