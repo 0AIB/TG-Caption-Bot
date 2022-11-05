@@ -2,10 +2,11 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
 import os
 import asyncio
 from pyrogram import filters
-from bot import autocaption
+# from bot import autocaption
 from config import Config
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
