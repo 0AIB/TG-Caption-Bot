@@ -2,7 +2,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
+import os
 import asyncio
 from pyrogram import filters
 from bot import autocaption
@@ -11,6 +11,15 @@ usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
 
+autocaption = Client(
+    "Captioner",
+    bot_token = Config.BOT_TOKEN,
+    api_id = Config.API_ID,
+    api_hash = Config.API_HASH,
+    workers = 20,
+)
+            
+            
 @autocaption.on_message(filters.command("current_caption") & filters.incoming)
 async def start(bot, message):
         await message.reply("Here is your current caption.\n {Config.CAPTION_TEXT}")
