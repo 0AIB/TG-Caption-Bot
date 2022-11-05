@@ -3,6 +3,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+import pyrogram
 import os
 import asyncio
 from pyrogram import filters, Client
@@ -11,6 +12,7 @@ from config import Config
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 autocaption = Client(
     "Captioner",
