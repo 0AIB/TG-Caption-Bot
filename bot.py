@@ -8,17 +8,19 @@ import os
 import asyncio
 from pyrogram import filters, Client
 # from bot import autocaption
-from config import Config
-usercaption_position = Config.CAPTION_POSITION
-caption_position = usercaption_position.lower()
-caption_text = Config.CAPTION_TEXT
+from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+usercaption_position = CAPTION_POSITION
+caption_position = usercaption_position.lower()
+caption_text = CAPTION_TEXT
+
 
 autocaption = Client(
     "Captioner",
-    bot_token = Config.BOT_TOKEN,
-    api_id = Config.API_ID,
-    api_hash = Config.API_HASH,    
+    bot_token=BOT_TOKEN,
+    api_id=API_ID,
+    api_hash=API_HASH,    
 )
                         
 @autocaption.on_message(filters.command("start") & filters.incoming)
@@ -29,7 +31,7 @@ async def start(bot, message):
 async def editing(bot, message):
       try:
          media = message.document or message.video or message.audio
-         caption_text = Config.CAPTION_TEXT
+         caption_text = CAPTION_TEXT
       except:
          caption_text = ""
          pass 
