@@ -68,5 +68,4 @@ async def editing(bot, message):
               
                    
 print("Bot Started! ✨")    
-
 autocaption.run()
