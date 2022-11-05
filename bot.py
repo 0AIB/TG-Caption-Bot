@@ -20,8 +20,9 @@ class autocaption(Client):
             api_id = Config.API_ID,
             api_hash = Config.API_HASH,
             workers = 20,
-            Caption = Caption,                           
-        )
+            caption = dict(
+                "caption"
+            )
 
 if __name__ == "__main__" :
     autocaption().run()
