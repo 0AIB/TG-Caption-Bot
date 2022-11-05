@@ -4,25 +4,20 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 from os import environ
 from pyrogram import filters, Client
-# from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
+from config import BOT_TOKEN, API_ID, API_HASH, CAPTION_TEXT, CAPTION_POSITION
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 usercaption_position = CAPTION_POSITION
 caption_position = usercaption_position.lower()
 CAPTION_TEXT = os.environ.get("CAPTION_TEXT", "")
 CAPTION_POSITION = os.environ.get("CAPTION_POSITION", "bottom")
       
-# autocaption = Client(
-#    "Captioner", api_id=int(os.environ.get("APP_ID", "")), api_hash=os.environ.get("API_HASH"), ""), bot_token=os.environ.get("TG_BOT_TOKEN", ""))
-
-
 autocaption = Client(
-    "Auto Caption bot",
-    bot_token=os.environ.get("TG_BOT_TOKEN", ""),
-    api_id=int(os.environ.get("APP_ID", 12345)),
-    api_hash=os.environ.get("API_HASH"), ""),
+    "AutoCaption",
+    bot_token=BOT_TOKEN
+    api_id=API_ID
+    api_hash=API_HASH
 )
                       
-
 @autocaption.on_message(filters.command("start") & filters.incoming)
 async def start(bot, message):
         await message.reply("<I>I Am Auto Caption Bot Just Add me as a Admin in your channel with edit permission and See Magic</I>\n\n• **support** : @Hollywodd_0980\n• **Source** : https://github.com/0AIB/TG-Caption-Bot")
