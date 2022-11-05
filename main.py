@@ -13,9 +13,9 @@ CAPTION_POSITION = os.environ.get("CAPTION_POSITION", "bottom")
       
 autocaption = Client(
     "AutoCaption",
-    bot_token=BOT_TOKEN
-    api_id=API_ID
-    api_hash=API_HASH
+    bot_token=BOT_TOKEN,
+    api_id=API_ID,
+    api_hash=API_HASH,
 )
                       
 @autocaption.on_message(filters.command("start") & filters.incoming)
