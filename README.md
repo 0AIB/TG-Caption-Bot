@@ -19,4 +19,3 @@ Bot Used For Auto Caption For Telegram Files & Video With Custom Text<br><br><i>
 
 #### [LX 0980](https://github.com/0AIB) | [Avishkar Patil](https://github.com/avipatilpro)
 
-- [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/wEf927)
